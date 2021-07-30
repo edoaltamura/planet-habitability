@@ -43,7 +43,7 @@ def equilibrium_temperature(
     """
     planet_temperature = star_temperature * np.sqrt(star_radius / orbit_semi_major_axis / 2) * (
             1 - planet_albedo) ** (1 / 4)
-    return planet_temperature.to('K')
+    return planet_temperature.to(K)
 
 
 def draw_radius_contours(
@@ -127,4 +127,5 @@ axes.scatter([1], [5735], label='Earth-Sun')
 axes.set_xlabel('Semi-major axis [AU]')
 axes.set_ylabel('Star effective temperature [K]')
 axes.legend()
+plt.savefig('example.png')
 plt.show()
